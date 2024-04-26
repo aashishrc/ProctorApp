@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <!-- Database properties DataSource -->
+    <session-factory>
+
+        <!-- Data Source Configuration -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/ProctorApp</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">password</property>
+
+        <!-- Session Factory Configuration -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Entity Classes to Scan -->
+        <mapping class="com.proctorapp.model.Users" />
+        <mapping class="com.proctorapp.model.Student" />
+        <mapping class="com.proctorapp.model.Professor" />
+<!--        <mapping class="com.proctorapp.model.Cart" />-->
+<!--        <mapping class="com.proctorapp.model.CartItem" />-->
+<!--        <mapping class="com.proctorapp.model.Customer" />-->
+<!--        <mapping class="com.proctorapp.model.CustomerOrder" />-->
+<!--        <mapping class="com.proctorapp.model.ShippingAddress" />-->
+<!--        <mapping class="com.proctorapp.model.User" />-->
+<!--        <mapping class="com.proctorapp.model.Queries" />-->
+
+    </session-factory>
+</hibernate-configuration>
